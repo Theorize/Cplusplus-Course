@@ -140,8 +140,8 @@ T& Matrix<T>::Read(int i, int j) const{
 template <typename T>
 Matrix<T>& Matrix<T>::operator=(const Matrix& otherMatrix)
 {
-   assert(mNumRows = otherMatrix.mNumRows);
-   assert(mNumCols = otherMatrix.mNumCols);
+   assert(mNumRows == otherMatrix.mNumRows);
+   assert(mNumCols == otherMatrix.mNumCols);
    isRowMajor = otherMatrix.getOrder();
 
    for (int i=0; i<mNumRows*mNumCols; i++)
